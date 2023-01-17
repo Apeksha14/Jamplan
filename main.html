@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    <title>JAM PLAN</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Anton|Bree+Serif" rel="stylesheet">
+    <!-- calendar js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
+    <!-- Custom stylesheet -->
+    <link href="assets/css/style-main.css" rel="stylesheet">
+  
+  </head>
+  
+  <body>
+
+  <div class="container">  <!-- title container -->
+    
+    <div class="row">  <!-- top row -->
+       
+        <div class="jumbotron header">  <!-- start jumbotron -->
+          
+          <div class="page-header mainhead"> <!-- start page-header -->
+          
+            <h1>JAM PLAN</h1>
+
+          </div>  <!-- end page-header -->
+
+          <marquee behavior="scroll" direction="left"><p id="sub">Track all the upcoming live events near you!!</p></marquee>
+
+
+        </div> <!-- end jumbotron -->
+        
+        <div class="container navcont"> <!-- nav container starts-->
+          
+          <ul class="nav nav-tabs navbar"> <!-- Menu bar list starts-->
+            
+            <li class="active1" ><a id="home" >Home</a></li>
+            <li><a id="aboutbtn">About</a></li>
+            <li><a id="eventsbtn">Events</a></li>
+            <li id="hover"><p id="welcome">Welcome,&nbsp;&nbsp;<span id="insert-name"></span>!&nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-danger signout" id="sign-out">Sign Out</button></p></li>
+          
+          </ul> <!-- End Menu Bar list -->
+          
+        </div> <!-- end nav container -->
+     
+    </div>  <!-- end top row -->
+
+  </div> <!-- end title container -->
+  
+  <div class="page-header pagehead"> <!-- page header starts -->
+    
+    <h3><span class="l">Live&nbsp;&nbsp;Concerts</span></h3>
+  
+  </div>  <!-- end page header -->
+
+  <div class="tech-slideshow"> <!-- Image slideshow div -->
+    
+    <div class="mover-1">
+        
+        <ul id="navlist"> <!-- Image Lists -->
+          
+          <li id="img1"></li>
+          <li id="img2"></li>
+          <li id="img3"></li>
+          <li id="img4"></li>
+          <li id="img5"></li>
+          <li id="img6"></li>
+          <li id="img7"></li>
+          <li id="img8"></li>
+  
+        </ul>
+    
+    </div>
+    
+    <div class="mover-2"></div>
+  
+  </div>
+    
+  <div id="footer1"> <!-- Footer div -->
+
+    <h4>Watch your favourite music bands and artists live</h4>
+  
+  </div><br>
+
+  <div class="container about"> <!-- About us container-->
+  
+    <div class="row"> <!-- row div starts  -->
+
+      <div class="col-lg-12"> <!-- column div starts-->
+
+        <h2> About Us</h2><br>
+
+        <p id="abt">JAMPLAN is built for looking up all Live Music Events happening around the city with the details of date and link to the tickets service directly on site.In addition to this the site also provides user with the details of the location and traffic around the area.</p>
+
+        <p>With responsive layout and advanced function, all information is processed smoothly and designed to enhance user's experiences.</p>
+    
+      </div> <!-- End Column div -->
+
+    </div>  <!-- End row div -->
+  
+  </div> <!-- About us container ends -->
+
+  <div class="container maincontent"> <!-- Main container that holds form and map results starts -->
+  
+    <div class="row"> <!-- row div starts -->
+
+      <div class=" col-lg-4"> <!-- Column div starts -->
+
+        <!-- Custom Search Panel div start -->
+
+          <div class="panel panel-primary resultcont">
+      
+            <div class="panel-heading heading">Custom Search</div> <!-- panel-heading --> 
+        
+              <div class="panel-body panel-form"> <!-- start panel-form -->
+  
+                <form id="myform"> <!-- Form start -->
+  
+                  <div class="question"> <!-- Search by city name -->
+              
+                    <label>City</label>
+                      
+                    <input type="text" class="form-control" name="term" id="city">
+    
+                  </div><br>
+
+                  <div class="question"> <!-- Search within specific radius -->
+              
+                    <label>Within (miles)</label>
+                      
+                    <input type="number" class="form-control" name="term" id="within">
+    
+                  </div><br>
+
+                  <div class=" form-group question"> <!-- Search from specific date -->
+            
+                    <label>From:</label>
+                      
+                    <div class='input-group date date1' id='datetimepicker1'>
+
+                      <input type='text' id="range1" class="form-control fromdate">
+                      <span class="input-group-addon  " >
+                        <span class="glyphicon glyphicon-calendar" style="color:#ff4a56;"></span>
+                      
+                      </span>
+                      
+                    </div>
+
+                  </div><br>
+
+                  <div class="form-group question"> <!-- Search within specific date range -->
+
+                    <label>To:</label>
+                        
+                    <div class='input-group date' id='datetimepicker2'>
+                          
+                      <input type='text' id="range2" class="form-control todate" />
+                      <span class="input-group-addon ">
+                        <span class="glyphicon glyphicon-calendar" style="color:#ff4a56;"></span>
+                      </span>
+                    
+                    </div>
+
+                  </div>
+
+                  <div class="dropdown">
+                      <a href="#" data-toggle="dropdown" class="dropdown-toggle">Events occuring:<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#" data-date='today'>Today</a></li>
+                          <li><a href="#" data-date='week'>This Week</a></li>
+                          <li><a href="#" data-date='month'>This Month</a></li>
+                          <li><a href="#" data-date='all'>All Events</a></li>
+                        </ul>
+                  </div>
+  
+                  <div class="form-group question"> 
+                
+                    <button id="add-submit">Submit</button>
+                    <button id="clear">Clear</button>
+
+                  </div>
+              
+                </form> <!-- End form -->
+        
+              </div> <!-- End panel-form -->
+
+          </div> <!-- End Custom Search Panel div -->
+
+      </div> <!-- End Column div -->
+    
+      <div class="col-lg-8"> <!-- Column div starts -->
+
+        <div class="panel panel-primary" id="maps"> <!-- Panel to display maps starts -->
+      
+          <div class="panel-heading heading" id='map-heading' >MAPS <button class='btn btn-primary' id='traffic'>Toggle Traffic</button></div> 
+          
+          <!-- Panel body that displays maps results -->
+          <div class="panel-body mapdiv" id="mapresult" > 
+            
+          </div>
+          
+        </div> <!-- Panel to display maps end -->
+        
+      </div> <!-- End Column div -->
+  
+    </div> <!-- End row div -->
+  
+  </div> <!-- Main container that holds form and map results ends -->
+
+  <div class="container " id="results"> <!-- search result container starts -->
+      
+    <div class="panel panel-primary resultcont">
+        
+      <div class="panel-heading heading">Concert Details</div>
+        
+        <div class="panel-body table-responsive" id="results-panel">
+          
+          <!-- Result Table-->
+          <table class="table table-hover" id='concert-table'> 
+            
+            <thead>
+              
+              <tr>
+                
+                <th>Event</th>
+                <th>Venue</th>
+                <th>Address</th>
+                <th>Starts:</th>
+              
+              </tr>
+            
+            </thead>
+            
+            <tbody>
+              
+            </tbody>
+            
+          </table>
+                    
+        </div>
+        
+    </div>
+
+  </div> <!-- search result container ends -->
+
+  <footer class="footer"> <!-- Footer -->
+        
+    <div class="container">
+                
+      <p class="text-muted">&#169;2017 - Copyright Team JAMPLAN</p>
+            
+    </div>
+      
+  </footer>
+
+  <!-- Include google maps api -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUUruju1mgKHGQQyFHqcUFv4VizLypoZw"></script>
+  <!-- Include Handlebar script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+  <!-- Include JQuery script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Firebase script -->
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- Include eventful api -->
+  <script type="text/javascript" src="https://api.eventful.com/js/api"></script>
+  <!-- Moment js -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js' type='text/javascript'></script>
+  <!-- Wolfe Javascript -->
+  <script src='assets/js/app.js'></script>
+
+  <script type="text/javascript"> 
+
+    // Datetimepicker calendar js
+    $(function () {
+        $('#datetimepicker1').datetimepicker({
+          format: 'MM/DD/YYYY'});
+        $('#datetimepicker2').datetimepicker({
+          format: 'MM/DD/YYYY'});
+    });
+
+  </script>
+  
+  <script type="text/javascript">
+      
+      $("#eventsbtn").on("click",function() { //onclick of Event link in the navigation bar
+        
+          $(".maincontent").css("display","block");
+          $(".tech-slideshow").css("display","none");
+          $("#results").css("display","block");
+          $(".about").css("display","none");
+          $(".pagehead").css("display","none");
+          $("#footer").css("display","none");
+          $("#search").css("display","block");
+          $("#maps").css("display","block");
+          $("#footer1").css("display","none");
+          google.maps.event.trigger(window, 'resize',initialise);
+
+      });
+      
+      $("#aboutbtn").on("click",function(){ //onclick of About link in the navigation bar
+        
+          $(".about").css("display","block");
+          $(".tech-slideshow").css("display","none");
+          $(".maincontent").css("display","none");
+          $("#results").css("display","none");
+          $(".pagehead").css("display","none");
+          $("#footer1").css("display","none");
+
+      });
+
+      $("#home").on("click",function(){ //onclick of Home on the navigation bar
+        
+          $(".maincontent").css("display","none");
+          $(".tech-slideshow").css("display","block");
+          $("#results").css("display","none");
+          $(".about").css("display","none");
+          $(".pagehead").css("display","block");
+          $("#footer1").css("display","block");
+        
+      });
+
+  </script>
+  <!-- Moment min js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>                       
+  <!-- DatePicker js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+
+</body>
+</html>
