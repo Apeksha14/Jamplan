@@ -388,7 +388,7 @@ ul li a:hover:not(.signout),ul li a:active:not(.signout)
  
   height: 200px;
   width: 1326px;
-  background: url(http://images.boomsbeat.com/data/images/full/209918/natasha-bedingfield.jpg);
+  background: url(https://images.boomsbeat.com/data/images/full/209918/natasha-bedingfield.jpg);
   top: 0;
   left: 0;
   height: 100%;
@@ -443,7 +443,7 @@ ul li a:hover:not(.signout),ul li a:active:not(.signout)
     
     left: 0;
     width: 346px;
-    background: url('http://images.boomsbeat.com/data/images/full/209918/natasha-bedingfield.jpg') 0 0;
+    background: url('../img/image1.jpeg') 0 0;
     background-size: cover;
 
 }
