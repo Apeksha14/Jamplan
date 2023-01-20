@@ -24,30 +24,30 @@ var providerGoogle = new firebase.auth.GoogleAuthProvider();
 // google log-in
 $("#g-login").on("click", function() {
 	console.log("clicked successfully");
-	firebase.auth().signInWithPopup(providerGoogle).then(function(result) {
+	//firebase.auth().signInWithPopup(providerGoogle).then(function(result) {
 	  // This gives you a Google Access Token. You can use it to access the Google API.
-	  var token = result.credential.accessToken;
+	//  var token = result.credential.accessToken;
 	  // The signed-in user info.
-	  var user = result.user;
+	//  var user = result.user;
 	  // change login items to an access button
-	  window.location.href = "main.html";
+	 window.location.href = "main.html";
 
-	}).catch(function(error) {
-		console.log(error.code);
+	//}).catch(function(error) {
+		///console.log(error.code);
 		
 
 
 
 	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
+	 // var errorCode = error.code;
+	 // var errorMessage = error.message;
 	  // The email of the user's account used.
-	  var email = error.email;
+	 // var email = error.email;
 	  // The firebase.auth.AuthCredential type that was used.
-	  var credential = error.credential;
+	 // var credential = error.credential;
 	  // alert login was invalid
 	  // alert("Login Unsuccessful");
-	});
+	//});
 });
 
 var providerTwitter = new firebase.auth.TwitterAuthProvider();
